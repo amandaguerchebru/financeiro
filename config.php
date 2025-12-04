@@ -19,3 +19,10 @@ try {
     //throw $th;
     die("Erro na conexão com o banco de dados: " . $e->getMessage());
 }
+
+// Iniciar sessão se ainda não foi iniciada
+if(session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>

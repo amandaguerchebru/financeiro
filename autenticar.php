@@ -1,5 +1,6 @@
 <?php
 require_once 'config.php';
+require_once 'mensagens.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
@@ -8,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validar os Campos
     if (empty($email) || empty($senha)) {
+        set_mensagem('Preencha todos os campos', 'erro');
         header('Location: login.php');
         exit;
     }
@@ -27,8 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['usuario_email'] = $usuario['email'];
 
         header('Location: index.php');
-        exit;
+        exit; 
     } else {
+        set_mensagem('Email ou senha incorretos', 'erro');
         header('Location: login.php');
         exit;
     }
