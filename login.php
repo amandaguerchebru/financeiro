@@ -16,21 +16,21 @@ if (isset($_SESSION['usuario_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sistema Financeiro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-login.css">
 </head>
 
 <body>
-    <h1>Login - Sistema Financeiro</h1>
+    <h1 class="loginh1">Login - Sistema Financeiro</h1>
 
     <?php exibir_mensagem(); ?>
 
-    <form action="autenticar.php" method="post">
+    <form action="autenticar.php" method="post" class="formlogin">
         <div>
-            <label div="email" for="email">E-mail:</label>
+            <label for="email"><b>E-mail:</b></label>
             <input type="email" name="email" id="email" required>
         </div>
         <div>
-            <label div="senha" for="senha">Senha:</label>
+            <label for="senha"><b>Senha:</b></label>
             <input type="password" name="senha" id="senha" required>
         </div>
         <div>

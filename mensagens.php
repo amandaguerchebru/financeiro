@@ -13,7 +13,7 @@ function exibir_mensagem()
         $mensagem = $_SESSION['mensagem'];
         $tipo = $_SESSION['mensagem_tipo'];
 
-        echo '<div class="mensagem mensagem-' . $tipo . '">';
+        echo '<div class="alert alert-primary">';
         echo '<p>' . $mensagem . '</p>';
         echo '</div>';
 
