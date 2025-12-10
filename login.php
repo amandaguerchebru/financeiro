@@ -26,11 +26,11 @@ if (isset($_SESSION['usuario_id'])) {
 
     <form action="autenticar.php" method="post">
         <div>
-            <label for="email">E-mail:</label>
+            <label div="email" for="email">E-mail:</label>
             <input type="email" name="email" id="email" required>
         </div>
         <div>
-            <label for="senha">Senha:</label>
+            <label div="senha" for="senha">Senha:</label>
             <input type="password" name="senha" id="senha" required>
         </div>
         <div>

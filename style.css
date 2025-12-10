@@ -17,10 +17,9 @@ body{
     background-color: white;
     border-radius: 5px;
     border: black, 2px, solid;
-    width: 500px;
-    height: 300px;
+    width: 300px;
+    height: 500px;
 }
-
 
 button{
     background-color:darkslateblue;
@@ -29,12 +28,10 @@ button{
     border: solid, 2px, black;
     border-radius: 2px;
     border-style: none;
+    
 }
 
-.set_mensagem {
-    background-color:darkred;
-    border: solid, darlred, 2px;
-    border-radius: 5px;
+if {
+    color: red;
 }
-
 
