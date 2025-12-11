@@ -1,0 +1,63 @@
+body {
+    background: linear-gradient(135deg, #f7df3e 0%, #6a0dad 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    background: #ffffffd8;
+    backdrop-filter: blur(6px);
+    padding: 30px;
+    border-radius: 18px;
+    margin-top: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #222;
+}
+
+form div {
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* inputs e selects */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid #6a0dad;
+    background: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #f7df3e;
+    box-shadow: 0 0 5px #f7df3e;
+}
+
+/* botões */
+button[type="submit"] {
+    background: #6a0dad;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}

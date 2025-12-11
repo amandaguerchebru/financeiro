@@ -1,3 +1,4 @@
+<!-- DASHBOARD -->
 <?php
 require_once 'config.php';
 require_once 'mensagens.php';
@@ -50,39 +51,11 @@ $ultimas_transacoes = $stmt_ultimas->fetchAll();
     <title>Sistema Financeiro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styledash.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Financeiro</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="categorias_listar.php">Categorias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="transacoes_listar.php">Transações</a>
-                    </li>
-                </ul>
-            </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <a class="nav-link">🤖Usuário: <?php echo $usuario_nome ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Sair</a>
-                    </li>
-                </ul>
-        </div>
-    </nav>
+    <?php include 'navbar.php' ?>
 
     <div class="container">
 
@@ -105,20 +78,20 @@ $ultimas_transacoes = $stmt_ultimas->fetchAll();
         </ul>
     </nav> -->
 
-    <h2>Resumo Financeiro</h2>
+    <h2>Seu Resumo Financeiro:</h2>
 
-    <div>
-        <div>
+    <div class="resumo-boxes">
+        <div class="resumo-box resumo-receitas">
             <h3>Receitas</h3>
             <p>R$ <?php echo number_format($total_receitas, 2, ',', '.') ?></p>
         </div>
 
-        <div>
+        <div class="resumo-box resumo-despesas">
             <h3>Despesas</h3>
             <p>R$ <?php echo number_format($total_despesas, 2, ',', '.') ?></p>
         </div>
 
-        <div>
+        <div class="resumo-box resumo-saldo">
             <h3>Saldo</h3>
             <p>R$ <?php echo number_format($saldo, 2, ',', '.') ?></p>
         </div>

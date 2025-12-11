@@ -10,7 +10,7 @@ if (isset($_SESSION['usuario_id'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-bs-theme="light>
 
 <head>
     <meta charset="UTF-8">
@@ -20,6 +20,19 @@ if (isset($_SESSION['usuario_id'])) {
 </head>
 
 <body>
+    <?php include 'bootstrap.php' ?>
+    
+    <script>
+    // Alterna entre claro e escuro manualmente
+    function alternarTema() {
+        const html = document.documentElement;
+        const temaAtual = html.getAttribute("data-bs-theme") || "light";
+        html.setAttribute("data-bs-theme", temaAtual === "light" ? "dark" : "light");
+    }
+    </script>
+
+    <div class="minion"></div>
+
     <h1 class="loginh1">Login - Sistema Financeiro</h1>
 
     <?php exibir_mensagem(); ?>
@@ -38,7 +51,23 @@ if (isset($_SESSION['usuario_id'])) {
         </div>
     </form>
 
-    <p>Não tem conta? <a href="registro.php">Cadastre-se aqui.</a></p>
+    <p class="registrar">Não tem conta? <a href="registro.php">Cadastre-se aqui.</a></p>
+
+    <!-- BOTÃO DE TEMA -->
+    <button class="btn btn-light mt-3" onclick="alternarTema()">Alterar Tema</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCRIPT PARA TROCAR O TEMA -->
+    <script>
+        function alternarTema() {
+            const html = document.documentElement;
+            const temaAtual = html.getAttribute("data-bs-theme") || "light";
+            html.setAttribute("data-bs-theme", temaAtual === "light" ? "dark" : "light");
+        }
+    </script>
+
 
 </body>
 
