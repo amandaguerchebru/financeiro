@@ -1,0 +1,215 @@
+/* ======== FUNDO ======== */
+body {
+    background: linear-gradient(135deg, #F7DF3E 0%, #6A0DAD 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ======== CONTAINER PRINCIPAL ======== */
+.container {
+    max-width: 1100px;
+    background: #ffffffd8;
+    backdrop-filter: blur(6px);
+    padding: 35px;
+    border-radius: 20px;
+    margin: 40px auto;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ======== TÍTULOS ======== */
+h2, h3 {
+    font-weight: 800;
+    background: linear-gradient(90deg, #f7df3e, #6a0dadaa);
+    padding: 12px 25px;
+    border-radius: 12px;
+    margin: 30px auto;
+}
+
+/* ======== BOTÃO “Nova Transação” ======== */
+.container > div a:first-child,
+a[href*="Nova"] {
+    display: inline-block;
+    background: #6A0DAD;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+    margin-bottom: 25px;
+}
+
+.container > div a:first-child:hover {
+    background: #F7DF3E;
+    color: #222;
+}
+
+/* =====================================================
+                   FILTROS — NOVO LAYOUT
+===================================================== */
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    max-width: 900px;
+    margin: 0 auto 35px auto;
+}
+
+/* Cada bloco (Tipo, Categoria, etc) */
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: #222;
+}
+
+/* Selects */
+form select {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px solid #6A0DAD;
+    background: white;
+    padding: 0 12px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+form select:focus {
+    border-color: #F7DF3E;
+    box-shadow: 0 0 5px #F7DF3E;
+}
+
+/* Botões dentro do formulário */
+form button,
+form a {
+    align-self: end;
+    width: 100%;
+    text-align: center;
+}
+
+/* Botão Filtrar */
+button[type="submit"] {
+    background: #6A0DAD;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #F7DF3E;
+    color: #222;
+}
+
+/* Botão Limpar Filtros (é um <a>) */
+form a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #6A0DAD;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+form a:hover {
+    background: #F7DF3E;
+    color: #222;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================================
+                         TABELA
+===================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.15);
+    margin-top: 20px;
+}
+
+thead {
+    background: #6A0DAD;
+    color: white;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background: #fafafa;
+}
+
+tbody tr:nth-child(even) {
+    background: #f1f1f1;
+}
+
+tbody tr:hover {
+    background: #F7DF3E33;
+}
+
+/* Texto Receita / Despesa */
+td:nth-child(4) {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Botões de ação */
+td a {
+    display: inline-block;
+    margin: 3px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* Editar */
+td a[href*="formulario"] {
+    background: #F7DF3E;
+    color: #222;
+}
+
+td a[href*="formulario"]:hover {
+    background: #ffcd00;
+}
+
+/* Excluir */
+td a[href*="excluir"] {
+    background: #6A0DAD;
+    color: white;
+}
+
+td a[href*="excluir"]:hover {
+    background: #4B087D;
+}
+

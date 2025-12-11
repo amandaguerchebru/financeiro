@@ -40,10 +40,11 @@ if ($id_categoria) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorias - Sistema Financeiro</title>
+    <link rel="stylesheet" href="style_catform.css">
 </head>
 
 <body>
-    <?php include 'navbar.php' ?>
+    <?php include 'navbar.php'?>
     <?php include 'bootstrap.php' ?>
     <div class="container">
         <!-- <h1>Sistema Financeiro</h1>
@@ -55,7 +56,7 @@ if ($id_categoria) {
 
         <?php exibir_mensagem(); ?>
 
-        <!-- <nav>
+        <!-- <nav class="navbar-custom navbar navbar-expand-lg>
             <ul>
                 <li><a href="index.php">Dashboard</a></li>
                 <li><a href="categorias_listar.php">Categorias</a></li>
@@ -65,7 +66,7 @@ if ($id_categoria) {
 
         <h2><?php echo $categoria ? 'Editar' : 'Nova'; ?> Categoria</h2>
 
-        <form action="categorias_salvar.php" method="POST">
+        <form action="categorias_salvar.php" method="POST" class="form-card">
             <?php if ($categoria): ?>
                 <input type="hidden" name="id_categoria" value="<?php echo $categoria['id_categoria']; ?>">
             <?php endif; ?>
@@ -86,9 +87,9 @@ if ($id_categoria) {
                 </select>
             </div>
 
-            <div>
+            <div class="actions">
                 <button type="submit">Salvar</button>
-                <a href="categorias_listar.php">Cancelar</a>
+                <a href="categorias_listar.php" class="cancelar">Cancelar</a>
             </div>
         </form>
     </div>

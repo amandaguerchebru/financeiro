@@ -54,6 +54,7 @@ $categorias = $stmt_categorias->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transações - Sistema Financeiro</title>
+    <link rel="stylesheet" href="style_tlistar.css">
 </head>
 
 <body>
@@ -70,6 +71,7 @@ $categorias = $stmt_categorias->fetchAll();
         </div>
 
         <h3>Filtros</h3>
+        
         <form method="GET" action="transacoes_listar.php">
             <div>
                 <label for="tipo">Tipo:</label>
@@ -95,12 +97,12 @@ $categorias = $stmt_categorias->fetchAll();
 
             <div>
                 <button type="submit">Filtrar</button>
-                <a href="transacoes_listar.php">Limpar Filtros</a>
+                <a href="transacoes_listar.php" class="limparfil">Limpar Filtros</a>
             </div>
         </form>
 
         <?php if (count($transacoes) > 0): ?>
-            <table border="1">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Data</th>

@@ -1,0 +1,130 @@
+/* FUNDO EM GRADIENTE MINIONS */
+body {
+    background: linear-gradient(135deg, #F7DF3E 0%, #6A0DAD 100%);
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* TÍTULO */
+h2 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #4B0082;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 12px rgba(75, 0, 130, 0.4);
+}
+
+h2::after {
+    content: "";
+    width: 120px;
+    height: 7px;
+    margin: 14px auto 0;
+    display: block;
+    border-radius: 6px;
+    background: #F7DF3E;
+    box-shadow: 0 2px 8px rgba(247, 223, 62, 0.7);
+}
+
+
+/* FORMULÁRIO EM CARTÃO */
+.form-card {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* LABELS */
+label {
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: 2px solid #6A0DAD;
+    background: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #F7DF3E;
+    box-shadow: 0 0 8px #F7DF3E;
+}
+
+/* ÁREA DOS BOTÕES */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* BOTÃO SALVAR */
+button {
+    flex: 1;
+    padding: 14px;
+    background: #6A0DAD;
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 80px; /* Super arredondado */
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: #F7DF3E;
+    color: #222;
+    transform: translateY(-2px);
+}
+
+/* BOTÃO CANCELAR */
+a.cancelar {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    background: #F7DF3E;
+    color: #222;
+    font-weight: 700;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+a.cancelar:hover {
+    background: #ffe55c;
+    transform: translateY(-2px);
+}
+
+.navbar-custom {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}

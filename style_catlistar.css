@@ -1,0 +1,124 @@
+/* ======== FUNDO GERAL ======== */
+
+body {
+    background: linear-gradient(135deg, #F7DF3E 0%, #6A0DAD 100%);
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* ======== CONTAINER PRINCIPAL ======== */
+
+.container {
+    max-width: 900px;
+    background: #ffffffdd;
+    backdrop-filter: blur(8px);
+    padding: 35px;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ======== TÍTULO ======== */
+
+h2 {
+    font-weight: 800;
+    text-align: center;
+    color: #222;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    display: inline-block;
+    border-bottom: 4px solid #6A0DAD;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 60%;
+    margin: 6px auto 0;
+    background: linear-gradient(90deg, #F7DF3E, #6A0DAD);
+    border-radius: 10px;
+}
+
+
+/* ======== BOTÃO NOVA CATEGORIA ======== */
+
+.container > div > a.btn-primary {
+    background: #6A0DAD;
+    border: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+
+.container > div > a.btn-primary:hover {
+    background: #F7DF3E;
+    color: #222;
+}
+
+
+/* ======== TABELA ======== */
+
+table {
+    background: white;
+    border-radius: 15px !important;
+    overflow: hidden;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.15);
+}
+
+thead {
+    background: #6A0DAD;
+    color: white;
+    font-weight: 700;
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 14px !important;
+}
+
+tbody tr:nth-child(odd) {
+    background: #fafafa;
+}
+
+tbody tr:nth-child(even) {
+    background: #f1f1f1;
+}
+
+tbody tr:hover {
+    background: #F7DF3E33;
+}
+
+
+/* ======== BOTÕES (Editar / Excluir) ======== */
+
+.btn-success {
+    background: #F7DF3E;
+    border: none;
+    color: #222;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btn-success:hover {
+    background: #e6c900;
+}
+
+.btn-danger {
+    background: #6A0DAD;
+    border: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.btn-danger:hover {
+    background: #4B087D;
+}
