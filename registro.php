@@ -187,7 +187,7 @@ if (isset($_SESSION['usuario_id'])) {
 
     <?php exibir_mensagem(); ?>
 
-    <form action="bootstrap.php" method="POST">
+    <form action="registrar.php" method="POST">
         <div>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>

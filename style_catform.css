@@ -1,130 +1,136 @@
-/* FUNDO EM GRADIENTE MINIONS */
+/* ===== BACKGROUND GERAL ===== */
 body {
-    background: linear-gradient(135deg, #F7DF3E 0%, #6A0DAD 100%);
     min-height: 100vh;
-    padding-top: 80px;
+    background: linear-gradient(135deg, #F7DF3E 0%, #6A0DAD 100%);
+    font-family: "Segoe UI", sans-serif;
 }
 
-/* CONTAINER CENTRAL */
+/* ===== CONTAINER ===== */
 .container {
-    max-width: 650px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px 50px;
     background: rgba(255, 255, 255, 0.85);
+    border-radius: 26px;
     backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 22px;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* TÍTULO */
+/* ===== TÍTULO ===== */
 h2 {
     text-align: center;
-    font-size: 38px;
+    font-size: 40px;
     font-weight: 900;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
     color: #4B0082;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     text-transform: uppercase;
-    text-shadow: 0 3px 12px rgba(75, 0, 130, 0.4);
+    position: relative;
 }
 
+/* Linha decorativa */
 h2::after {
     content: "";
-    width: 120px;
+    width: 130px;
     height: 7px;
-    margin: 14px auto 0;
-    display: block;
-    border-radius: 6px;
     background: #F7DF3E;
-    box-shadow: 0 2px 8px rgba(247, 223, 62, 0.7);
+    border-radius: 6px;
+    display: block;
+    margin: 14px auto 0;
+    box-shadow: 0 4px 10px rgba(247, 223, 62, 0.7);
 }
 
-
-/* FORMULÁRIO EM CARTÃO */
+/* ===== CARD DO FORMULÁRIO ===== */
 .form-card {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 26px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== CAMPOS ===== */
+.form-card > div {
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    padding: 25px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+    margin-bottom: 28px;
 }
 
-/* LABELS */
+/* Labels */
 label {
     font-weight: 700;
-    color: #222;
-    margin-bottom: 6px;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
-/* INPUTS */
-input, select {
-    width: 100%;
-    padding: 14px;
+/* Inputs e select */
+input,
+select {
+    height: 50px;
+    padding: 0 18px;
+    font-size: 16px;
     border-radius: 14px;
     border: 2px solid #6A0DAD;
-    background: #fff;
-    font-size: 16px;
     outline: none;
-    transition: 0.2s ease;
+    transition: 0.25s ease;
 }
 
+/* Foco */
 input:focus,
 select:focus {
     border-color: #F7DF3E;
-    box-shadow: 0 0 8px #F7DF3E;
+    box-shadow: 0 0 0 4px rgba(247, 223, 62, 0.4);
 }
 
-/* ÁREA DOS BOTÕES */
+/* ===== AÇÕES ===== */
 .actions {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 25px;
+    margin-top: 35px;
 }
 
-/* BOTÃO SALVAR */
-button {
+/* Botão salvar */
+.actions button {
     flex: 1;
-    padding: 14px;
+    height: 55px;
     background: #6A0DAD;
+    color: #fff;
+    font-weight: 800;
+    font-size: 17px;
     border: none;
-    color: white;
-    font-weight: 700;
-    border-radius: 80px; /* Super arredondado */
+    border-radius: 60px;
     cursor: pointer;
-    font-size: 16px;
     transition: 0.25s ease;
+    box-shadow: 0 6px 18px rgba(106, 13, 173, 0.4);
 }
 
-button:hover {
-    background: #F7DF3E;
-    color: #222;
+/* Hover salvar */
+.actions button:hover {
+    background: #4B087D;
     transform: translateY(-2px);
 }
 
-/* BOTÃO CANCELAR */
-a.cancelar {
+/* Botão cancelar */
+.actions .cancelar {
     flex: 1;
-    padding: 14px;
-    text-align: center;
+    height: 55px;
     background: #F7DF3E;
     color: #222;
-    font-weight: 700;
-    border-radius: 40px;
+    font-weight: 800;
+    font-size: 17px;
     text-decoration: none;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.25s ease;
+    box-shadow: 0 6px 18px rgba(247, 223, 62, 0.5);
 }
 
-a.cancelar:hover {
-    background: #ffe55c;
+/* Hover cancelar */
+.actions .cancelar:hover {
+    background: #ffd700;
     transform: translateY(-2px);
-}
-
-.navbar-custom {
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 10;
 }
